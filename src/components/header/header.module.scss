@@ -1,0 +1,62 @@
+@import '../../static/css/variable.scss';
+@import '../../static/css/mixins.scss';
+
+
+.hdWrap {
+  max-width: $layoutInnerWidth;
+  padding: 0 32px;
+  box-sizing: content-box;
+  margin: 0 auto;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logoBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      width: 42px;
+      height: 40px;
+    }
+    .logoText {
+      font-size: 36px;
+      padding-left: 10px;
+      background-image: linear-gradient(to bottom, #DEDBE6,#F7F6F9);
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  nav {
+    a {
+      font-size: $f16;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      padding: 12px;
+    }
+  }
+  .lauchApp {
+    @include btnPrimary;
+  }
+}
+
+@media(max-width:1280px ) {
+  .hdWrap {
+    padding: 0 23px;
+    nav {
+      display: none;
+    }
+    .logoBox {
+      .logoText {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+
+
+
+
+ 

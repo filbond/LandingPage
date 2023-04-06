@@ -1,0 +1,596 @@
+@import '../../static/css/variable.scss';
+@import '../../static/css/mixins.scss';
+
+
+@mixin text($fontSize:$f16, $fontWeight:400, $lineHeight: 1.5) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: 0.02em;
+  font-weight: $fontWeight;
+}
+
+.home {
+  min-height: calc(100vh - 140px - 64px);
+  // common
+  .moduleWrap {
+    padding-bottom: 144px;
+    header {
+      max-width: 800px;
+      margin: 0 auto;
+      box-sizing: content-box;
+      h3 {
+        font-size: $h3;
+        text-align: center;
+        background-image: radial-gradient($btn-primaryFg, $btn-primaryBg);
+        background-clip: text;
+        color: transparent;
+      }
+    }
+    h2 {
+      margin-top: 13px;
+      font-size: $h2;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-align: center;
+    }
+    .moduleSc {
+      margin-top: 88px;
+    }
+
+    .list {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      li {
+        padding-right: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include text($f16, 700);
+        padding-top: 12px;
+        padding-bottom: 12px;
+        .num {
+          background-image: radial-gradient($btn-primaryFg, $btn-primaryBg);
+          background-clip: text;
+          color: transparent;
+        }
+      }
+    }
+    .cmDesc {
+      max-width: $layoutInnerWidth;
+      margin-left: auto;
+      margin-right: auto;
+      background: url('../../static/images/img-bg.png') repeat 0 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .descList {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .descItem {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          >svg {
+            width:40px;
+            height: 40px;
+          }
+          .descTxt {
+            @include text;
+          }
+        }
+      }
+      .descBtn {
+        @include btnPrimary($f24, 24px 32px);
+        margin-top: 48px;
+      }
+    }
+  }
+  //
+  .sloganWrap {
+    max-width: $layoutInnerWidth;
+    margin: 0 auto;
+    padding-top: 144px;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: content-box;
+    h1 {
+      font-size: $h1;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-align: center;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      .holders {
+        @include btnPrimary($f24, 24px 32px);
+        margin: 0 13px;
+      }
+      .miners {
+        @include btnSecondary($f24, 24px 32px);
+        margin: 0 13px;
+      }
+    }
+  }
+  //
+  .forHolderWrap {
+    .depositFiL {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .picBox {
+        position: relative;
+        padding-top: 88px;
+        padding-bottom: 88px;
+        padding-left: 73px;
+        max-width: 398px;
+        box-sizing: content-box;
+        background: url('../../static/images/img-bg.png') repeat 0 0;
+        img {
+          width:100%;
+          position: relative;
+          left:67px;
+          box-shadow: 0 2px 2px rgba(0,0,0, .2), 0 10px 10px -3px rgba(0,0,0, .2);
+        }
+      }
+      .list {
+        margin-left: 147px;
+      }
+    }
+    .stFiLMagic {
+      max-width: $layoutInnerWidth;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: content-box;
+      .magicConentBox {
+        max-width: 400px;
+        h3 {
+          font-size: $h3;
+          line-height: 1;
+        }
+        .magicConent {
+          margin-top: 11px;
+          @include text;
+          ul {
+            margin: 36px 0;
+          }
+        }
+      }
+      img {
+        max-width: 640px;
+      }
+    }
+
+    .descHolders {
+      padding: 80px 63px;
+    }
+  }
+  //
+  .forMinersWrap {
+    .manageNode {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .picBox {
+        position: relative;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 96px;
+        max-width: 339px;
+        box-sizing: content-box;
+        background: url('../../static/images/img-bg.png') repeat 0 0;
+        img {
+          width:100%;
+          position: relative;
+          left:44px;
+        }
+      }
+      .list {
+        margin-left: 153px;
+        width: 563px;
+        li {
+          padding-right: 0;
+        }
+        .txt {
+          font-size: $f20;
+          padding-right: 0;
+        }
+      }
+    }
+    .feature {
+      max-width: $layoutInnerWidth;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0 28px;
+      box-sizing: content-box;
+      dl {
+        display: flex;
+        flex-direction: column;
+        max-width: 320px;
+        dt {
+          display: flex;
+          flex-direction: column;
+          >svg {
+            width: 56px;
+            height: 56px;
+          }
+          .hd {
+            @include text(20px, 700, 1);
+            padding-top: 12px;
+            padding-bottom: 12px;
+          }
+        }
+        dd {
+          @include text()
+        }
+      }
+    }
+    .descMiners {
+      padding: 80px 90px;
+    }
+  }
+  // 
+  .voteWrap {
+    .vote {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .picBox {
+        position: relative;
+        padding-top: 85px;
+        padding-bottom: 85px;
+        padding-left: 148px;
+        max-width: 358px;
+        box-sizing: content-box;
+        background: url('../../static/images/img-bg.png') repeat 0 0;
+        img {
+          width:100%;
+          position: relative;
+          left:75px;
+        }
+      }
+      .infoBox {
+        margin-left: 195px;
+        max-width: 496px;
+        .infoDd {
+          @include text;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:1280px ) {
+  .home {
+    min-height: auto;
+    // common
+    .moduleWrap {
+      padding-bottom: 80px;
+      header {
+        padding: 0 32px;
+        h3 {
+          font-size: $f20;
+        }
+      }
+      h2 {
+        font-size: $f24;
+      }
+      .moduleSc {
+        margin-top: 56px;
+      }
+  
+      .list {
+        flex-direction: column;
+        li {
+          padding-top: 9px;
+          padding-bottom: 9px;
+          line-height: 1;
+          .num {
+            font-size: $f14;
+            line-height: 1.5;
+          }
+        }
+      }
+      .cmDesc {
+        .descList {
+          flex-wrap: wrap;
+          .descItem {
+            width: 50%;
+            margin-bottom: 24px;
+          }
+        }
+        .descBtn {
+          margin-top: 8px;
+          font-size: $f20;
+          padding: 18px 16px;
+        }
+      }
+    }
+    // 
+    .sloganWrap {
+      padding-top: 80px;
+      h1 {
+        font-size: 32px;
+        letter-spacing: -0.02em;
+      }
+      .links {
+        .holders {
+          font-size: $f16;
+          padding: 12px;
+        }
+        .miners {
+          font-size: $f16;
+          padding: 12px;
+        }
+      }
+    }
+    // 
+    .forHolderWrap {
+      .depositFiL {
+        width: 100%;
+        .picBox {
+          padding-top: 6.09375%;
+          padding-bottom: 6.09375%;
+          padding-left: 2.5%;
+          max-width: 41.875%;
+          img {
+            left: 2.8125%;
+          }
+        }
+        .list {
+          margin-left: 7.8125%;
+          li {
+            width: 100%;
+            flex-direction: row;
+            padding-right: 0;
+            align-items: center;
+            .num {
+              padding-right: 8px;
+            }
+          }
+        }
+      }
+      .stFiLMagic {
+        padding: 0 32px;
+        .magicConentBox {
+          max-width: 43.16%;
+          .magicConent {
+            ul {
+              margin: 26px 0;
+            }
+          }
+        }
+        img {
+          max-width: 51.3%;
+        }
+      }
+  
+      .descHolders {
+        padding: 32px;
+      }
+    }
+    // 
+    .forMinersWrap {
+      .manageNode {
+        .picBox {
+          padding-top: 5%;
+          padding-bottom: 5%;
+          padding-left: 0;
+          max-width: 44.375%;
+          img {
+            left: 14.44%;
+          }
+        }
+        .list {
+          margin-left: 8.90625%;
+          padding-right: 0;
+          flex:1;
+          li {
+            flex-direction: row;
+            align-items: center;
+          }
+          .txt {
+            font-size: $f16;
+            margin-left: 8px;
+          }
+        }
+      }
+      .feature {
+        dl {
+          margin: 0 12px;
+        }
+      }
+      .descMiners {
+        padding: 32px;
+      }
+    }
+    // 
+    .voteWrap {
+      .vote {
+        .picBox {
+          padding-top: 0;
+          padding-bottom: 0;
+          padding-left: 0;
+          width: 44.375%;
+          height: 73.90625%;
+          img {
+            left: 11.268%;
+            margin-top: 11.268%;
+            margin-bottom: 11.268%;
+            width: 110.22%;
+          }
+        }
+        .infoBox {
+          margin-left: 14.6875%;
+          max-width: 35.9375%;
+          h2 {
+            text-align: left;
+          }
+          .infoDd {
+            font-size: $f14;
+          }
+        }
+      }
+    }
+  }
+}
+
+// phone
+@media(max-width: 640px) {
+  .home {
+    // common
+    .moduleWrap {
+      header {
+        padding: 0 24px;
+      }
+      .moduleSc {
+        margin-top: 56px;
+      }
+      .cmDesc {
+        .descList {
+          .descItem {
+            width: 100%;
+          }
+        }
+        .descBtn {
+          margin-top: 24px;
+          font-size: $f20;
+          padding: 18px 16px;
+        }
+      }
+    }
+    // 
+    .forHolderWrap {
+      .depositFiL {
+        flex-direction: column-reverse;
+        .picBox {
+          max-width: 100%;
+          width: 100%;
+          padding: 40px 36px;
+          margin-top: 56px;
+          box-sizing: border-box;
+          img {
+            left: 0;
+          }
+        }
+        .list {
+          margin-left: 0;
+        }
+      }
+      .stFiLMagic {
+        padding: 0 24px;
+        flex-direction: column;
+        .magicConentBox {
+          max-width: 100%;
+          h3 {
+            font-size: $f20;
+          }
+          .magicConent {
+            font-size: $f14;
+          }
+        }
+        img {
+          margin-top: 32px;
+          max-width: 100%;
+        }
+      }
+      .descHolders {
+        padding: 48px 24px;
+      }
+    }
+    // 
+    .forMinersWrap {
+      .manageNode {
+        flex-direction: column;
+        .picBox {
+          padding: 32px 24px;
+          max-width: 100%;
+          img {
+            left:0;
+          }
+        }
+        .list {
+          margin-top: 56px;
+          margin-left: 0;
+          padding: 0 24px;
+          width: 100%;
+        }
+      }
+      .feature {
+        padding: 0 24px;
+        flex-direction: column;
+        dl {
+          margin-bottom: 24px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          dt {
+            .hd {
+              font-size: $f16;
+            }
+          }
+          dd {
+            font-size: $f14;
+            
+          }
+        }
+      }
+      .descMiners {
+        padding: 48px 24px;
+      }
+    }
+    // 
+    .voteWrap {
+      .vote {
+        flex-direction: column-reverse;
+        .picBox {
+          padding:0;
+          margin:0;
+          max-width: 100%;
+          width: 100%;
+          height: 324px;
+          margin-top: 175px;
+          img {
+            position:absolute;
+            left:24px;
+            right: 24px;
+            bottom: 64px;
+            width: calc(100% - 48px);
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+          }
+        }
+        .infoBox {
+          padding: 0 24px;
+          padding-bottom: 26px;
+          max-width: 100%;
+          margin-left: 0;
+          h2 {
+            font-size: $h2;
+          }
+          .infoDd {
+            font-size: $f14;
+          }
+        }
+      }
+    }
+  }
+}

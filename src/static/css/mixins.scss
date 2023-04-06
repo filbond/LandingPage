@@ -1,0 +1,25 @@
+@import './variable.scss';
+
+@mixin btnPrimary($fontSize: 16px, $padding:12px) {
+  display: inline-block;
+  padding: $padding;
+  line-height:1;
+  text-align: center;
+  background: linear-gradient(to left, $btn-primaryFg, $btn-primaryBg);
+  font-size: $fontSize;
+  color: $btn-primaryText;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+  &:hover {
+    transition: all .4s ease;
+    transform: translateY(-2px);
+  }
+}
+
+
+
+@mixin btnSecondary($fontSize: 16px, $padding:12px) {
+  @include btnPrimary($fontSize, $padding);
+  background: linear-gradient(to left, $btn-secondaryFg, $btn-secondaryBg);
+  color: $btn-secondaryText;
+}

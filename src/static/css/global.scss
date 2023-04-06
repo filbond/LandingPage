@@ -1,0 +1,55 @@
+@import './reset.scss';
+@import './font.scss';
+@import './variable.scss';
+
+html, body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  background:url('../images/bg.png') repeat 0 0, linear-gradient(to bottom, $fg, $bg);
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+*:not(img):not(video):not(svg), *:after, *:before {
+  box-sizing: inherit;
+}
+
+a {
+  color: $primaryText;
+  text-decoration: none;
+  &:hover {
+    color: $btn-primaryBg;
+  }
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  color: $primaryText;
+}
+
+.page {
+  min-height: 100vh;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.layout {
+  max-width: $layoutWidth;
+  margin: 0 auto;
+}
+
+@media(max-width:1280px) {
+  body {
+    background-position: top;
+  }
+}
