@@ -12,14 +12,21 @@ function Header() {
           <span className={styles.logoText}>FilBond</span>
         </Link>
         <nav>
-          <Link to="/" rel="noopener noreferrer">
+          <Link
+            to="https://app.filbond.io/"
+            rel="noopener noreferrer">
             For Holder
           </Link>
-          <Link to="/" rel="noopener noreferrer">
+
+          <Link
+            to="https://app.filbond.io/nodes"
+            rel="noopener noreferrer">
             For Miners
           </Link>
         </nav>
-        <Link className={styles.lauchApp} to="/">
+        <Link
+          className={styles.lauchApp}
+          to="https://app.filbond.io/">
           Lauch App
         </Link>
       </div>
