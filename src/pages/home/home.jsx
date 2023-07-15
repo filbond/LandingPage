@@ -20,10 +20,17 @@ const Slogan = () => {
     <section className={classNames(styles.moduleWrap, styles.sloganWrap)}>
       <h1>Where Filecoin Miners and Holders together make more money</h1>
       <div className={styles.links}>
-        <Link className={styles.holders} to="/" rel="noopener noreferrer">
+        <Link
+          className={styles.holders}
+          to="https://app.filbond.io"
+          rel="noopener noreferrer">
           For Holders
         </Link>
-        <Link className={styles.miners} to="/" rel="noopener noreferrer">
+
+        <Link
+          className={styles.miners}
+          to="https://app.filbond.io/nodes"
+          rel="noopener noreferrer">
           For Miners
         </Link>
       </div>
@@ -123,10 +130,9 @@ const ForHolder = () => {
         </div>
         <Link
           className={styles.descBtn}
-          to="/"
+          to="https://app.filbond.io"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Start earning more
         </Link>
       </div>
@@ -240,10 +246,9 @@ const ForMiners = () => {
         </div>
         <Link
           className={styles.descBtn}
-          to="/"
+          to="https://app.filbond.io/nodes"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Increase pledge
         </Link>
       </div>

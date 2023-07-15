@@ -35,7 +35,9 @@ function Footer() {
               Terms & Conditions
             </Link>
           </nav>
-          <Link className={styles.lauchApp} to="/">
+          <Link
+            className={styles.lauchApp}
+            to="https://app.filbond.io">
             Lauch App
           </Link>
         </div>
